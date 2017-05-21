@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 10-Apr-2016.
+" Last Change: 22-May-2017.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -136,4 +136,10 @@ if v:version >= 704
   filetype plugin indent on
   
   "End dein Scripts-------------------------
+endif
+if (has('win32') || has('win64'))
+    "use scp
+    let g:netrw_scp_cmd     = "pscp.exe -q -batch"
+    let g:netrw_sftp_cmd    = "psftp.exe"
+    let g:netrw_ssh_cmd     = "plink.exe"
 endif
