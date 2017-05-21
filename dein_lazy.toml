@@ -1,0 +1,24 @@
+[[plugins]]
+repo = 'jelera/vim-javascript-syntax'
+on_ft = 'javascript' 
+if = 0
+
+[[plugins]]
+repo = 'jiangmiao/simple-javascript-indenter'
+on_ft = 'javascript' 
+if = 0
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = 'javascript' 
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+if = "has('lua')"
+on_i = 1
+hook_source = 'source ~/.vim/neocomplete.rc.vim'
+
+[[plugins]]
+repo = 'https://bitbucket.org/teramako/jscomplete-vim.git'
+on_i = 1
+hook_source = "let g:jscomplete_use = ['dom']"
